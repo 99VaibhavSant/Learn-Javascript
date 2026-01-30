@@ -7,7 +7,6 @@
 
 */
 
-
 /*
 ! ✅ if...else Definition (JavaScript)
 
@@ -24,7 +23,7 @@ If the condition is false → else block runs
 
 */
 
-/* 
+/*
 if (condition) {
   runs if condition is true
 } else {
@@ -32,21 +31,17 @@ if (condition) {
 }
 */
 
-
 let age = 18;
 
-if(age >= 18){
-    console.log("Eligible to vote")
+if (age >= 18) {
+  console.log("Eligible to vote");
+} else {
+  console.log("Not eligible to vote");
 }
-else{
-    console.log("Not eligible to vote")
-}
-
-
 
 /*
 ! else if — simple definition (JavaScript)
- 
+
 * else if is used in conditional statements to check another condition when the previous if (or else if) condition is false.
 
 👉 It lets you handle multiple conditions in order.
@@ -82,7 +77,7 @@ if (score >= 90) {
 */
 
 // ! 🔄 Flowchart-Style Explanation
-/* 
+/*
 Start
   ↓
 Check condition1?
@@ -96,21 +91,32 @@ Check condition1?
         Run else block → End
 */
 
+//! Early Return Pattern
 
+/*
+Early return means you exit a function as soon as a condition is met, instead of wrapping everything inside if / else blocks.
 
+Think of it as: “Stop the function as early as possible.”
+*/
 
+//! Code Example
+function checkage(age) {
+  if (age >= 18) return "Adult";
+  else if (age < 18) return "Kid";
+}
+
+// console.log(checkage(21));
+// console.log(checkage(15));
 
 //! Question: Check if a number is even or odd.
 
 let num = 8;
 
-if(num % 2 === 0){
-    console.log(`${num} Even number`);
+if (num % 2 === 0) {
+  console.log(`${num} Even number`);
+} else {
+  console.log(`${num} Odd number`);
 }
-else{
-    console.log(`${num} Odd number`);
-}
-
 
 // ! Question: Validate username and password.
 let username = "admin";
@@ -124,7 +130,6 @@ if (username === "admin" && password === "1234") {
   console.log("Invalid user");
 }
 
-
 // ! Question: Check positive, negative, or zero.
 
 let n = -5;
@@ -136,3 +141,8 @@ if (n > 0) {
 } else {
   console.log("Zero");
 }
+
+/*
+! 🎯 Interview One-Liner
+  `Early return improves readability by exiting a function immediately when a condition is met, reducing nesting and making code cleaner.
+*/
