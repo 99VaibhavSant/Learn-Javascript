@@ -29,5 +29,4 @@ let result1 = numbers1.every(num => num % 2 === 0);
 
 console.log(result1); // false
 
-// ❌ 5 is odd → fails the condition → falsei
-
+// ❌ 5 is odd → fails the condition → false
